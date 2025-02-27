@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: logistic
+  rabbitmq:
+    addresses: ${RABBIT_URI}
+
+rabbitmq:
+  queue: logistic_queue
+
+
+server:
+  servlet:
+    context-path: /api/v1
