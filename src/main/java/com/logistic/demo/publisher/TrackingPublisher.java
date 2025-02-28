@@ -29,6 +29,8 @@ public class TrackingPublisher {
         tracking.setArrivalTime(LocalDateTime.now().plusDays(1));
         tracking.setStatus(TrackingStatus.SENT);
 
+        tracking.getPackages().forEach(p -> p.setSendDate(LocalDateTime.now()));
+
         logger.info("Sending tracking", tracking);
         rabbitTemplate.convertAndSend(queue, tracking);
 

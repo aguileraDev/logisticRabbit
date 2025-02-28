@@ -3,6 +3,7 @@ package com.logistic.demo.controllers;
 import com.logistic.demo.dtos.Tracking;
 import com.logistic.demo.publisher.TrackingPublisher;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +18,7 @@ public class TrackingController {
     }
 
     @PostMapping
-    public Tracking sendTracking(Tracking tracking) {
+    public Tracking sendTracking(@RequestBody Tracking tracking) {
         return trackingPublisher.publish(tracking);
     }
 }
