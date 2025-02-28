@@ -12,10 +12,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Tracking {
-    String agency;
-    LocalDateTime arrivalTime;
-    TrackingStatus status;
-    String address;
-    List<Package> packages;
+    private String agency;
+    private LocalDateTime arrivalTime;
+    private TrackingStatus status;
+    private String address;
+    private List<Package> packages;
+    private Double total;
+
 
 }

@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
 public class Package {
     private String sender;
     private String receptor;
+    private Double weight;
+    private Double distance;
     private Double price;
     private LocalDateTime sendDate;
 
